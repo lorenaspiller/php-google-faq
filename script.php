@@ -50,14 +50,52 @@ $faq = [
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+
+        <!-- google font -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+        <!-- /google font -->
+
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+        <!-- /font awesome -->
+
+        <link rel="stylesheet" href="css/style.css">
+        <title>Google Faq</title>
     </head>
     <body>
-        <?php foreach($faq as $data) : ?>
+        <header>
+            <div class="header-top">
+                <div class="intestazione">
+                    <img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" alt="google logo">
+                    <a class="titolo" href="#">Privacy e termini</a>
+                </div>
+                <div class="utente">
+                    <button class="btn"><i class="fas fa-th"></i></button>
+                    <div class="utente__img">
+                        <img src="https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png" alt="img utente">
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <ul class="lista-link">
+                    <li><a class="active" href="#">Introduzione</a></li>
+                    <li><a href="#">Norme sulla privacy</a></li>
+                    <li><a href="#">Termini di servizio</a></li>
+                    <li><a href="#">Tecnologie</a></li>
+                    <li><a href="#">Domande frequenti</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="container">
+            <?php foreach($faq as $data) : ?>
 
-        <h2><?= $data['question']; ?></h2>
-        <p><?= $data['answer']; ?></p>
+            <h2><?= $data['question']; ?></h2>
+            <p><?= $data['answer']; ?></p>
 
-        <?php endforeach; ?>
+            <?php endforeach; ?>
+            </div>
+        </main>
     </body>
 </html>
