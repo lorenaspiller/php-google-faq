@@ -42,6 +42,14 @@ $faq = [
         "answer" => "In alcuni casi sì. Quando fai clic su un risultato della Ricerca Google, il tuo browser web potrebbe reindirizzare alla pagina web di destinazione anche l'indirizzo Internet, o URL, della pagina dei risultati di ricerca sotto forma di URL referrer. Talvolta, l'URL della pagina dei risultati di ricerca potrebbe contenere la query di ricerca che hai inserito. Se utilizzi la ricerca SSL (la funzione di ricerca criptata di Google), nella maggior parte dei casi i termini di ricerca non vengono inviati come parte dell'URL negli URL referrer. Questo comportamento può fare eccezione, ad esempio se utilizzi alcuni browser meno diffusi. Ulteriori informazioni sulla ricerca SSL sono disponibili qui. Le query di ricerca o le informazioni contenute nell'URL referrer potrebbero essere disponibili mediante Google Analytics o un'API (Application Programming Interface). Inoltre, gli inserzionisti potrebbero ricevere informazioni relative all' esatte parole chiave che hanno determinato il clic su un annuncio."
     ],
 ];
+
+$nav = [
+    "Introduzione",
+    "Norme sulla privacy",
+    "Termini di servizio",
+    "Tecnologie",
+    "Domande frequenti"
+]
 ?>
 
 <!DOCTYPE html>
@@ -79,11 +87,12 @@ $faq = [
             </div>
             <nav>
                 <ul class="lista-link">
-                    <li><a class="active" href="#">Introduzione</a></li>
-                    <li><a href="#">Norme sulla privacy</a></li>
-                    <li><a href="#">Termini di servizio</a></li>
-                    <li><a href="#">Tecnologie</a></li>
-                    <li><a href="#">Domande frequenti</a></li>
+                <?php foreach($nav as $data) : ?>
+
+                    <li><a class="active" href="#"><?= $data; ?></a></li>
+
+                 <?php endforeach; ?>
+                
                 </ul>
             </nav>
         </header>
